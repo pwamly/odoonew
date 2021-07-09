@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="betika_form" model="ir.ui.view">
+        <field name="name">betika.staff.form</field>
+        <field name="model">betika.paladin</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="image" widget="image" class="oe_avatar"/>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="age"/>
+                        </group>
+                        <group>
+                            <field name="gender"/>
+                            <field name="note"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="betika_action" model="ir.actions.act_window">
+        <field name="name">Betika</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">betika.paladin</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                A new module for betika!
+            </p>
+        </field>
+    </record>
+
+    <!-- Top menu item -->
+    <menuitem id="betika_main"
+              name="betika main"
+              sequence="10"/>
+
+    <menuitem id="betika_sub"
+              name="betika submenu"
+              parent="betika_main"
+              action="betika_action"
+              sequence="10"/>
+    <menuitem id="betika_sub2"
+              name="betika submenu two"
+              parent="betika_sub"
+              action="betika_action"
+              sequence="10"/>
+</odoo>

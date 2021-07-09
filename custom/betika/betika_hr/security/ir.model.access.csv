@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_betika_paladin,access.betika.paladin,model_betika_paladin,,1,1,1,1
